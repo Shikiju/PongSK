@@ -1,25 +1,80 @@
-<html>  
-  <head>  
-    <title>Simple game with HTML5 Canvas</title>  
-  <style>  
-  body {  
-    margin:0px;  
-    padding:0px;  
-    text-align:center;  
-  }  
-  
-  canvas{  
-    outline:0;  
-    border:1px solid #000;  
-    margin-left: auto;  
-    margin-right: auto;  
-  }  
-  </style>  
-  </head>  
-  <body>  
-    <canvas id='c'></canvas>  
-	<script src="socket.io.js"></script>
-	<script src="game.js"></script> 
-	<script src="jquery-1.7.2.js"></script>
-  </body>  
-</html>  
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>tattooPattern</title>
+<link rel="stylesheet" type="text/css" href="reset.css" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<div id="wrap">
+  <div class="floatl main">
+    <div id="header">
+      <div id="logo">
+        <h1>Pong SK</h1>
+        <div>The pong game for derps</div>
+      </div>
+    </div>
+    <!-- /header -->
+    <div id="content">
+      <div class="blog floatl">
+        <h2>Players</h2>
+        <ul class="meun">
+          <li><a href="#">You</a></li>
+        </ul>
+      </div>
+      <div class="blog last folatr">
+        <h2>News</h2>
+        <ul class="meun">
+          <li><a href="#">Pong launched!</a></li>
+        </ul>
+      </div>
+      <div class="blogg">
+        <h2>Lobby</h2>
+        <div id="chatwindow" style="display:inline-block;height:100px;width:384px;overflow-y:scroll">
+            Yow
+            Yow <br />
+            Yow<br />
+            YowYowv<br />
+            Yow<br />
+            Yow<br />
+            Yow<br />
+            Yow<br />
+            Yow<br />
+            Yow<br /><br />
+            Yow<br />
+            Yow<br />
+            Yow<br />
+            Yow<br />
+            Yow<br />
+        </div>
+        <div>
+            <input type="text" value="Type your name" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="folatr side">
+    <ul id="nav">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About us</a></li>
+      <li><a href="#">Production</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+  <!-- /content -->
+  <div id="footer">
+    <div id="ftlink"> <a href="#">Home</a> | <a href="#">About Us</a> | <a href="#">Contact</a> </div>
+    <p id="copyright">Â© 2008. All Rights Reserved. <br/>
+      Designed by <a href="http://www.free-css-templates.com/">Free CSS Templates</a>, Thanks to <a href="http://www.openwebdesign.org/">professional web design</a></p>
+    <div id="xhtml"></div>
+  </div>
+  <!-- /footer -->
+</div>
+<script type="text/javascript" src="jquery-1.7.2.js"></script>
+<script type="text/javascript" src="clientSocketIo.js"></script>
+<script type="text/javascript">
+    $("#chatwindow").scrollTop($("#chatwindow")[0].scrollHeight);
+</script>
+</body>
+</html>
