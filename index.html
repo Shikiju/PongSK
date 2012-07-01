@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -48,9 +48,10 @@
             Yow<br />
             Yow<br />
         </div>
-        <div>
-            <input type="text" value="Type your name" />
-        </div>
+        <fieldset id="chatbutton" style="margin-top:50px">
+            <input type="text" name="textfield" class="jNiceInputWrapper" />
+            <button type="reset">Send</button>
+        </fieldset>
       </div>
     </div>
   </div>
@@ -72,6 +73,7 @@
   <!-- /footer -->
 </div>
 <script type="text/javascript" src="jquery-1.7.2.js"></script>
+<script src="socket.io.js"></script>
 <script type="text/javascript" src="clientSocketIo.js"></script>
 <script type="text/javascript">
     $("#chatwindow").scrollTop($("#chatwindow")[0].scrollHeight);
