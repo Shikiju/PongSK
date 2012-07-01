@@ -13,12 +13,12 @@ window.Calth = function() {
 	  ctx.fillRect(P2.pos.x,P2.pos.y,P2.paddle.width,P2.paddle.height);
 	}
 	//canvas itself 
-	c = document.getElementById('c'), 
+	var c = document.getElementById('c');
 
 	//and two-dimensional graphic context of the
 	//canvas, the only one supported by all 
 	//browsers for now
-	ctx = c.getContext('2d');
+	var ctx = c.getContext('2d');
 
 	//setting canvas size 
 	c.width = 800;
@@ -49,13 +49,23 @@ window.Calth = function() {
 	  createPeddles(player1, player2);
 	  gLoop = setTimeout(GameLoop, 1000 / 50);
 	}
+
+	var identifiedToServer = false;
 	var socket = io.connect('http://localhost:8888');
-	socket.on('position', function (data) {
-	  console.log(data);
-	  setPositions(data);
-	  console.log('Moved oponent...');
-	  setTimeout('', 1000);
-	  socket.emit('updatePosition', player1);
+	socket.on('identify', function (data) {
+	  var name = prompt(data.msg, "Harry Potter");
+	  if (name != null && name != "") {
+	    socket.emit('set nickname', name);
+	  }
+	});
+
+	socket.on('waiting on players', function (msg) {
+	  alert('waiting for players!');
+	})
+
+	socket.on('ready', function (data) {
+	  alert('game started!');
+	  socket.emit('msg', player1);
 	});
 
 	GameLoop();
