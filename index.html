@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>tattooPattern</title>
+<title>Pong SK >></title>
 <link rel="stylesheet" type="text/css" href="reset.css" />
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
@@ -20,7 +20,8 @@
       <div class="blog floatl">
         <h2>Players</h2>
         <ul class="meun">
-          <li><a href="#">You</a></li>
+          <li><a href="#"><span id="player1name"></span></a></li>
+          <li><a href="#"><span id="player2name"></span></a></li>
         </ul>
       </div>
       <div class="blog last folatr">
@@ -32,21 +33,7 @@
       <div class="blogg">
         <h2>Lobby</h2>
         <div id="chatwindow" style="display:inline-block;height:100px;width:384px;overflow-y:scroll">
-            Yow
-            Yow <br />
-            Yow<br />
-            YowYowv<br />
-            Yow<br />
-            Yow<br />
-            Yow<br />
-            Yow<br />
-            Yow<br />
-            Yow<br /><br />
-            Yow<br />
-            Yow<br />
-            Yow<br />
-            Yow<br />
-            Yow<br />
+            This is the chatwindow...
         </div>
         <fieldset id="chatbutton" style="margin-top:50px">
             <input type="text" name="textfield" class="jNiceInputWrapper" />
@@ -66,14 +53,14 @@
   <!-- /content -->
   <div id="footer">
     <div id="ftlink"> <a href="#">Home</a> | <a href="#">About Us</a> | <a href="#">Contact</a> </div>
-    <p id="copyright">Â© 2008. All Rights Reserved. <br/>
+    <p id="copyright">© 2008. All Rights Reserved.  Shikiju<br/>
       Designed by <a href="http://www.free-css-templates.com/">Free CSS Templates</a>, Thanks to <a href="http://www.openwebdesign.org/">professional web design</a></p>
     <div id="xhtml"></div>
   </div>
   <!-- /footer -->
 </div>
 <script type="text/javascript" src="jquery-1.7.2.js"></script>
-<script src="socket.io.js"></script>
+<script type="text/javascript" src="socket.io.js"></script>
 <script type="text/javascript" src="clientSocketIo.js"></script>
 <script type="text/javascript">
     $("#chatwindow").scrollTop($("#chatwindow")[0].scrollHeight);
