@@ -35,14 +35,19 @@
         <div id="chatwindow" style="display:inline-block;height:100px;width:384px;overflow-y:scroll">
             This is the chatwindow...
         </div>
-        <fieldset id="chatbutton" style="margin-top:50px">
-            <input type="text" name="textfield" class="jNiceInputWrapper" />
-            <button type="reset">Send</button>
+        <fieldset id="chatForm" style="margin-top:50px">
+            <input id="chatTextField" type="text" name="textfield" class="jNiceInputWrapper" />
+            <button id="chatButton">Send</button>
         </fieldset>
       </div>
     </div>
   </div>
   <div class="folatr side">
+    <div id="offlineimage" style="margin-left:100px;margin-top:120px;display:none;position:absolute">
+        <div style="font-size:large;color:white">LOADING</div>
+        <div class="circle"></div>
+        <div class="circle1"></div>
+    </div>
     <ul id="nav">
       <li><a href="#">Home</a></li>
       <li><a href="#">About us</a></li>
@@ -64,6 +69,7 @@
 <script type="text/javascript" src="clientSocketIo.js"></script>
 <script type="text/javascript">
     $("#chatwindow").scrollTop($("#chatwindow")[0].scrollHeight);
+    clientSocketComm.initialize();
 </script>
 </body>
 </html>
